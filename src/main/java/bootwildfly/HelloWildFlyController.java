@@ -4,11 +4,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class HelloWildFlyController {
+@RequestMapping("hello")
+public class HelloWildFlyController
+{
 
+    @RequestMapping("hell")
+    public String sayHello()
+    {
+        return ("Hello, SpringBoot on Wildfly");
+    }
 
-    @RequestMapping("hello")
-    public String sayHello(){
+    @RequestMapping("hell1")
+    public String sayHello1()
+    {
         return ("Hello, SpringBoot on Wildfly");
     }
 }
